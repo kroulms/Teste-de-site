@@ -55,6 +55,22 @@
     <source src="audio/Ghosts.mp3" type="audio/mpeg">
 </audio>
 
+<button onclick="revelarJunimo()">Chamar Junimo</button>
+
+<div id="Junimo"></div>
+
+<script>
+     function revelarJunimo() {
+        const Junimo = document.getElementById("Junimo");
+        Junimo.classList.add("pular");
+
+        setTimeout(() => {
+            Junimo.classList.remove("pular");
+            
+        }, 1000);
+    }
+    
+</script>
 </body>
 
 </html>
