@@ -1,9 +1,29 @@
-<!DOCTYPE html> 
+<!DOCTYPE html>
 <html lang="pt-br">
 <head>
     <meta charset="UTF-8">
     <title>Portfolio de site, exemplo: Stardew Valley</title>
     <link rel="stylesheet" href="style.css">
+    <style>
+        /* Estilo do Junimo */
+        #Junimo {
+            font-size: 50px;
+            text-align: center;
+            margin-top: 20px;
+            transition: transform 0.3s;
+        }
+
+        .pular {
+            animation: saltar 1s ease;
+        }
+
+        @keyframes saltar {
+            0% { transform: translateY(0); }
+            30% { transform: translateY(-50px); }
+            60% { transform: translateY(0); }
+            100% { transform: translateY(-20px); }
+        }
+    </style>
 </head>
 <body>
     <header>
@@ -44,33 +64,32 @@
 
         <p>Esse é o Harvey ou Dr. Harvey, as pessoas da vila costumam falar que ele é velho mas na verdade ele é maduro e é um cara muito amável, apesar de introvertido. Mora em cima da sua clínica e vive trabalhando. Ele é bastante pilhado com a saúde da população.</p>
         
-        <p>A Maru trabalha com ele e as vezes os dois tem conversas que podem causar ciúmes dependendo da sua escolha de casável. Ama Café (feliz no simples?), óleo de trufas, picles (por Deus...), superprato e um bom vinho, mas afinal, quem não gosta de um bom vinho?!</p>
+        <p>A Maru trabalha com ele e as vezes os dois têm conversas que podem causar ciúmes dependendo da sua escolha de casável. Ama Café (feliz no simples?), óleo de trufas, picles (por Deus...), superprato e um bom vinho, mas afinal, quem não gosta de um bom vinho?!</p>
 
-        <p>Se Dumbledore estivesse em um universo paralelo, onde ele deixaria de ser um professor comunicativo, pra um médico introvertido e paranoico, com toda certeza seria o Harveyzinho.</p>
+        <p>Se Dumbledore estivesse em um universo paralelo, onde ele deixaria de ser um professor comunicativo pra um médico introvertido e paranoico, com toda certeza seria o Harveyzinho.</p>
 
         <img src="img/Dumbledore.jpg" alt="Alvo" width="300">
     </section>
 
-<audio autoplay loop muted>
-    <source src="audio/Ghosts.mp3" type="audio/mpeg">
-</audio>
+    <!-- Música de fundo -->
+    <audio autoplay loop muted>
+        <source src="audio/Ghosts.mp3" type="audio/mpeg">
+    </audio>
 
-<button onclick="revelarJunimo()">Chamar Junimo</button>
+    <!-- Botão e animação -->
+    <button onclick="revelarJunimo()">Chamar Junimo</button>
 
-<div id="Junimo"></div>
+    <div id="Junimo">🌱</div>
 
-<script>
-     function revelarJunimo() {
-        const Junimo = document.getElementById("Junimo");
-        Junimo.classList.add("pular");
+    <script>
+        function revelarJunimo() {
+            const Junimo = document.getElementById("Junimo");
+            Junimo.classList.add("pular");
 
-        setTimeout(() => {
-            Junimo.classList.remove("pular");
-            
-        }, 1000);
-    }
-    
-</script>
+            setTimeout(() => {
+                Junimo.classList.remove("pular");
+            }, 1000);
+        }
+    </script>
 </body>
-
 </html>
